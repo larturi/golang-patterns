@@ -5,6 +5,7 @@ import (
 	"mod_patterns/factory"
 	"mod_patterns/observer"
 	"mod_patterns/singleton"
+	"mod_patterns/strategy"
 )
 
 func main() {
@@ -14,5 +15,7 @@ func main() {
 
 	singleton.MainSingleton(false)
 
-	observer.MainObserver(true)
+	observer.MainObserver(false)
+
+	strategy.MainStrategy(true)
 }
