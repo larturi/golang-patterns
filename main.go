@@ -3,13 +3,16 @@ package main
 import (
 	"mod_patterns/adapter"
 	"mod_patterns/factory"
+	"mod_patterns/observer"
 	"mod_patterns/singleton"
 )
 
 func main() {
-	factory.MainFactory()
+	factory.MainFactory(false)
 
-	adapter.MainAdapter()
+	adapter.MainAdapter(false)
 
-	singleton.MainSingleton()
+	singleton.MainSingleton(false)
+
+	observer.MainObserver(true)
 }

@@ -72,7 +72,11 @@ func printNameAndStock(p IProduct) {
 	fmt.Printf("Product name: %s, with stock %d\n", p.getName(), p.getStock())
 }
 
-func MainFactory() {
+func MainFactory(run bool) {
+	if !run {
+		return
+	}
+
 	laptop, _ := GetComputerFactory("laptop")
 	desktop, _ := GetComputerFactory("desktop")
 

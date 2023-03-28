@@ -31,7 +31,11 @@ func (bpa *BankPaymentAdapter) Pay() {
 	bpa.BankPayment.Pay(bpa.bankAccount)
 }
 
-func MainAdapter() {
+func MainAdapter(run bool) {
+	if !run {
+		return
+	}
+
 	cash := &CashPayment{}
 	ProcessPayment(cash)
 	// bank := &BankPayment{}

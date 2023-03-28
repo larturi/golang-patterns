@@ -30,7 +30,11 @@ func getDatabaseIntance() *Database {
 	return db
 }
 
-func MainSingleton() {
+func MainSingleton(run bool) {
+	if !run {
+		return
+	}
+
 	var wg sync.WaitGroup
 	for i := 0; i < 10; i++ {
 		wg.Add(1)
